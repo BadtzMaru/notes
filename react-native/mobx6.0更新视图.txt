@@ -1,0 +1,16 @@
+import { observable, action, makeObservable, } from "mobx";
+
+class HomeStore {
+  constructor() {
+    // 使用 makeObservable mobx6.0 才会更新视图
+    makeObservable(this);
+  }
+  //使用observabel 监听数据
+  @observable num = 0;
+  //定义动作改变值的更改
+  @action add() {
+    this.num++
+  }
+}
+
+export default HomeStore;
