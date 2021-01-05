@@ -1,0 +1,8 @@
+you might check the permissions on android/gradlew
+
+they should be 755 not 644
+
+run ```chmod 755 android/gradlew``` inside your app root folder
+then run react-native run-android
+
+and it should work again.
