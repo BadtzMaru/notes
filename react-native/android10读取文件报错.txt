@@ -1,0 +1,10 @@
+在AndroidManifest.xml添加一句：
+
+android:requestLegacyExternalStorage="true"
+
+原因:
+Android Q分区存储权限变更及适配问题：
+
+为了让用户更好地控制自己的文件，并限制文件混乱的情况，Android Q修改了APP访问外部存储中文件的方法。外部存储的新特性被称为Scoped Storage。
+
+Android Q仍然使用READ_EXTERNAL_STORAGE和WRITE_EXTERNAL_STORAGE作为面向用户的存储相关运行时权限，但现在即使获取了这些权限，访问外部存储也受到了限制。APP需要这些运行时权限的情景发生了变化，且各种情况下外部存储对APP的可见性也发生了变化。
