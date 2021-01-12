@@ -1,0 +1,15 @@
+Android studio 有时找不到R文件、 导入的资源、布局 、 jar包 等  . 可能是studio 缓存造成的 .
+
+这是可以使用
+
+1) clean project  清理项目  
+
+2) invalidate caches restart    清理Android studio缓存
+
+1) 使用clean project 
+
+工具栏  Build  -->     clean project
+
+2) 使用invalidate caches restart   
+
+选择工具栏  File  -->     Invalidate Caches /Restart...    ->   Invalidate and Restart        重启Android studio
