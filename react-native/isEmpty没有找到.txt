@@ -1,0 +1,4 @@
+package.jspn文件中添加
+"resolutions": {
+	"deprecated-react-native-listview": "0.0.6"
+},

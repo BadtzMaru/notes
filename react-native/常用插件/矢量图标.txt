@@ -1,0 +1,79 @@
+npm install --save react-native-vector-icons
+
+IOS:
+
+List of all available fonts to copy & paste in info.plist
+
+```
+<key>UIAppFonts</key>
+<array>
+  <string>AntDesign.ttf</string>
+  <string>Entypo.ttf</string>
+  <string>EvilIcons.ttf</string>
+  <string>Feather.ttf</string>
+  <string>FontAwesome.ttf</string>
+  <string>FontAwesome5_Brands.ttf</string>
+  <string>FontAwesome5_Regular.ttf</string>
+  <string>FontAwesome5_Solid.ttf</string>
+  <string>Foundation.ttf</string>
+  <string>Ionicons.ttf</string>
+  <string>MaterialIcons.ttf</string>
+  <string>MaterialCommunityIcons.ttf</string>
+  <string>SimpleLineIcons.ttf</string>
+  <string>Octicons.ttf</string>
+  <string>Zocial.ttf</string>
+  <string>Fontisto.ttf</string>
+</array>
+
+```
+
+react-native link react-native-vector-icons
+
+
+android:
+
+> android/app/build.gradle
++ apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+
+> android/settings.gradle
+
+rootProject.name = 'MyApp'
+ 
+include ':app'
+ 
++ include ':react-native-vector-icons'
++ project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+
+> android/app/build.gradle
+
+apply plugin: 'com.android.application'
+ 
+android {
+  ...
+}
+ 
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile "com.android.support:appcompat-v7:23.0.1"
+  compile "com.facebook.react:react-native:+"  // From node_modules
++ compile project(':react-native-vector-icons')
+}
+
+> MainApplication.java
+
++ import com.oblador.vectoricons.VectorIconsPackage;
+ 
+....
+ 
+  @Override
+  protected List<ReactPackage> getPackages() {
+    return Arrays.<ReactPackage>asList(
+      new MainReactPackage()
++   , new VectorIconsPackage()
+    );
+  }
+ 
+}
+
+查看图标: http://oblador.github.io/react-native-vector-icons/
