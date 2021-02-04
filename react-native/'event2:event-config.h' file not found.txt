@@ -1,0 +1,3 @@
+This issue is caused by an update to the "Flipper-Folly" pod-spec. If you'd like to keep Flipper enabled, you can override the version in your Podfile:
+
+use_flipper!({ 'Flipper-Folly' => '2.3.0' })
