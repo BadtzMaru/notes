@@ -1,0 +1,3 @@
+// 可以捕获到网络请求
+// eslint-disable-next-line no-undef
+GLOBAL.XMLHttpRequest = GLOBAL.originalXMLHttpRequest || GLOBAL.XMLHttpRequest;
