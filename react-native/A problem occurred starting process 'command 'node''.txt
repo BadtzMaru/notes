@@ -1,0 +1,23 @@
+A problem occurred starting process 'command 'node''
+
+第一种解决办法：
+
+这个错误是node路径出错。我重新添加了一个路径
+
+project.ext.react = [        
+
+nodeExecutableAndArgs : ["/usr/local/bin/node"]
+
+];
+
+这是react-native的react.gradle 里面的nodeExecutableAndArgs 的默认node，获取不到
+
+
+
+第二种：
+
+cd android/
+
+./gradlew --stop
+
+然后执行 ./gradlew assembleRelease
