@@ -1,0 +1,14 @@
+问题：新搭React-native项目0.63.2版本，第一次安卓真机运行安装完成后闪退，Android studio内报错：couldn’t find DSO to load: libfbjni.so result: 0
+
+解决：修改 android/app/build.gradle 文件，添加以下代码
+
+defaultConfig {
+    ···
+    ndk {
+        abiFilters "armeabi-v7a","x86"
+    }
+}
+packagingOptions {
+	···
+    pickFirst "lib/arm64-v8a/librealm-jni.so"
+}
