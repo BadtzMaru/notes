@@ -1,0 +1,9 @@
+react-native-scrollable-tab-view或者abtd tab报错
+错误原因：
+react-native 0.61.0以上，将组件viewpager剔除，交由社区维护
+
+解决办法：
+安装viewpager
+
+安装命令：
+yarn add @react-native-community/viewpager
